@@ -1,0 +1,62 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+db.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# IDEs / Editores
+.vscode/
+.idea/
+
+# Testing / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Migraciones cache
+*/migrations/__pycache__/
+
+# Archivos temporales
+*.bak
+*.tmp
+*.swp
+
+# PostgreSQL backups
+*.dump
+*.sql
+
+# uv / Python packaging
+.eggs/
+*.egg-info/
+dist/
+build/
