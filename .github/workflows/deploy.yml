@@ -15,7 +15,7 @@ jobs:
       postgres:
         image: postgres:16
         env:
-          POSTGRES_DB: shopapi_test_db
+          POSTGRES_DB: shopapi_ci_db
           POSTGRES_USER: shopapi_user
           POSTGRES_PASSWORD: shopapi_pass_123
         options: >-
@@ -46,14 +46,14 @@ jobs:
           SECRET_KEY: test-secret-key-for-ci-only
           DEBUG: True
           ALLOWED_HOSTS: localhost,127.0.0.1
-          DB_NAME: shopapi_test_db
+          DB_NAME: shopapi_ci_db
           DB_USER: shopapi_user
           DB_PASSWORD: shopapi_pass_123
           DB_HOST: localhost
           DB_PORT: 5432
-          TEST_DB_NAME: shopapi_test_db
+          TEST_DB_NAME: shopapi_ci_db
           CORS_ALLOW_ALL_ORIGINS: True
-        run: uv run python manage.py test store --verbosity=2
+        run: uv run python manage.py test store --verbosity=2 --noinput
 
   deploy:
     name: Deploy to Azure VM
